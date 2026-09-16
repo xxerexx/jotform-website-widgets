@@ -22,8 +22,10 @@
         </nav>
     </header>
 
-    <!-- Section 1: Hero -->
+    <!-- Section 1: Hero with Parallax Background -->
     <section id="hero">
+        <div class="hero-parallax-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Building Visions. Delivering Excellence.</h1>
             <p>From full-scale home additions to luxury kitchen remodels, Apex Builders brings precision, transparency, and top-tier craftsmanship to every square foot.</p>
@@ -31,8 +33,8 @@
         </div>
     </section>
 
-    <!-- Floating Trust Bar -->
-    <div class="trust-bar">
+    <!-- Floating Trust Bar (Glassy Panel) -->
+    <div class="trust-bar glass-panel">
         <div class="trust-stat">
             <h3>15+</h3>
             <p>Years Experience</p>
@@ -58,17 +60,17 @@
             <p>We handle every aspect of your renovation with an unwavering commitment to quality and structural integrity.</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card glass-card">
                 <img src="https://www.kaminskiyhomeremodeling.com/wp-content/uploads/2018/07/kitchen-remodel-company.jpg" alt="Kitchen Remodeling">
                 <h3>Kitchen Remodels</h3>
                 <p>Custom cabinetry, premium countertops, and functional layouts designed to make your kitchen the true heart of the home.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card glass-card">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJkDoadEidHCstIA65EiRZOKY14Xio2VnBdF4FQe_iDuoy2itKMYzmycaM&s=10" alt="Bathroom Renovations">
                 <h3>Bathroom Oasis</h3>
                 <p>Transform your outdated bath into a spa-like retreat with custom tiling, walk-in showers, and modern fixtures.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card glass-card">
                 <img src="https://deomaxgroup.ca/wp-content/uploads/2025/03/custom-home-addition-remodel-plans.webp" alt="Home Additions">
                 <h3>Additions & Extensions</h3>
                 <p>Need more space? We seamlessly integrate new rooms, second stories, and sunrooms into your existing architectural footprint.</p>
@@ -112,7 +114,7 @@
             <div class="project-image">
                 <img src="https://georgedecoration.com/wp-content/uploads/2024/07/d68f655f65d42d0d2708f89a307893c-768x432.png" alt="Oakwood Kitchen">
             </div>
-            <div class="project-info">
+            <div class="project-info glass-card">
                 <span class="project-tag">Full Gut & Remodel</span>
                 <h3>The Oakwood Estate</h3>
                 <p>We knocked down two load-bearing walls to create this massive open-concept kitchen and living area, complete with a 10-foot marble island and custom overhead timber beams.</p>
@@ -123,7 +125,7 @@
             <div class="project-image">
                 <img src="https://hamishmurray.com/wp-content/uploads/2019/10/battleground-24.jpg" alt="Master Bathroom">
             </div>
-            <div class="project-info">
+            <div class="project-info glass-card">
                 <span class="project-tag">Bathroom Renovation</span>
                 <h3>Maple Street Master Bath</h3>
                 <p>A complete modernization featuring heated floor tiles, a dual-head glass enclosure shower, and a freestanding soaking tub overlooking the private garden.</p>
@@ -134,7 +136,7 @@
             <div class="project-image">
                 <img src="https://www.longhousecedar.com/wp-content/uploads/2019/04/thumb-contemporary-outdoor-hardwood-floor-tiles-for-wood-doors.jpg" alt="Outdoor Deck">
             </div>
-            <div class="project-info">
+            <div class="project-info glass-card">
                 <span class="project-tag">Exterior / Decking</span>
                 <h3>Riverside Outdoor Living</h3>
                 <p>We extended the living space outdoors with a multi-level composite deck, integrated fire pit, and a custom cedar pergola designed for year-round entertaining.</p>
@@ -148,8 +150,8 @@
             <h2>Start Your Renovation</h2>
             <p>Tell us about your project, budget, and timeline. Fill out the form below and one of our project estimators will reach out within 24 hours.</p>
             
-            <!-- Contextically Related Jotform Structure -->
-            <div class="jotform-wrapper">
+            <!-- Contextually Related Jotform Structure inside Glassy Panel -->
+            <div class="jotform-wrapper glass-panel-dark">
                 <div class="widget-note">
                     <strong>Jotform Integration Note:</strong> Embed your official Jotform script/iframe here. Recommended widgets include a <strong>Form Calculator</strong> for estimating remodeling costs and a <strong>File Upload</strong> widget for blueprints.
                 </div>
@@ -195,7 +197,7 @@
 
                     <div class="form-group">
                         <label for="inspiration">Upload Blueprints or Inspiration Photos (Optional)</label>
-                        <input type="file" id="inspiration" style="padding: 0.5rem; background: #F7FAFC;">
+                        <input type="file" id="inspiration" style="padding: 0.5rem; background: rgba(255,255,255,0.05); color: #fff;">
                     </div>
 
                     <button type="submit" class="submit-btn">Submit Project Inquiry</button>
