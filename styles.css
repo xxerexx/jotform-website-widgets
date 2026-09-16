@@ -30,6 +30,28 @@ a {
     color: inherit;
 }
 
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+    background: rgba(26, 54, 93, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 /* Sticky Top Navigation */
 header {
     background-color: var(--primary-navy);
@@ -72,22 +94,43 @@ nav {
     color: var(--white);
 }
 
-/* Section 1: Hero with Overlapping Stats Box */
+/* Section 1: Hero with Parallax Background Container */
 #hero {
     position: relative;
     height: 80vh;
-    background-image: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), url('https://hips.hearstapps.com/hmg-prod/images/edc100123egan-002-6500742f5feb7.jpg?crop=0.688xw:1.00xh;0.157xw,0&resize=1200:*');
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
     display: flex;
     align-items: center;
     padding: 0 2rem;
+}
+.hero-parallax-bg {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/edc100123egan-002-6500742f5feb7.jpg?crop=0.688xw:1.00xh;0.157xw,0&resize=1200:*');
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 1;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(26, 54, 93, 0.75), rgba(26, 54, 93, 0.65));
+    z-index: 2;
 }
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     color: var(--white);
+    position: relative;
+    z-index: 3;
 }
 .hero-content h1 {
     font-size: 4rem;
@@ -120,12 +163,11 @@ nav {
     margin: -50px auto 0;
     position: relative;
     z-index: 10;
-    background-color: var(--white);
     display: flex;
     justify-content: space-around;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     text-align: center;
 }
 .trust-stat h3 {
@@ -141,7 +183,7 @@ nav {
     font-size: 0.85rem;
 }
 
-/* Section 2: Services (Card Grid) */
+/* Section 2: Services */
 #services {
     padding: 8rem 2rem 5rem;
     background-color: var(--bg-light);
@@ -167,15 +209,16 @@ nav {
     gap: 2rem;
 }
 .service-card {
-    background-color: var(--white);
     border-top: 5px solid var(--accent-orange);
     padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     text-align: left;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 .service-card img {
     width: 100%;
@@ -189,7 +232,7 @@ nav {
     font-size: 1.5rem;
 }
 
-/* Section 3: Our Process (Vertical Timeline Layout) */
+/* Section 3: Our Process */
 #process {
     padding: 6rem 2rem;
     background-color: var(--white);
@@ -235,7 +278,7 @@ nav {
     color: var(--text-gray);
 }
 
-/* Section 4: Portfolio (Alternating Zig-Zag Layout) */
+/* Section 4: Portfolio */
 #portfolio {
     padding: 6rem 0;
     background-color: var(--bg-light);
@@ -272,6 +315,9 @@ nav {
 }
 .project-info {
     flex: 1;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 .project-info h3 {
     font-size: 2rem;
@@ -296,7 +342,7 @@ nav {
 /* Section 5: Quote / Jotform Area */
 #quote {
     padding: 6rem 2rem;
-    background-color: var(--primary-navy);
+    background: linear-gradient(135deg, var(--primary-navy), #0f223f);
     color: var(--white);
     text-align: center;
 }
@@ -311,17 +357,16 @@ nav {
 }
 .quote-container p {
     margin-bottom: 3rem;
-    color: #A0AEC0;
+    color: #CBD5E0;
 }
 
-/* Jotform Container & Form Elements Styling */
+/* Jotform Glass Wrapper & Elements */
 .jotform-wrapper {
-    background-color: var(--white);
     padding: 3rem 2.5rem;
-    border-radius: 8px;
-    color: var(--text-dark);
+    border-radius: 12px;
+    color: var(--white);
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 .form-group {
     margin-bottom: 1.5rem;
@@ -330,7 +375,7 @@ nav {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: var(--primary-navy);
+    color: #E2E8F0;
     font-size: 0.95rem;
 }
 .form-group input, 
@@ -338,17 +383,27 @@ nav {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #CBD5E0;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     font-size: 1rem;
+    color: var(--white);
     box-sizing: border-box;
+}
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #A0AEC0;
+}
+.form-group select option {
+    background: var(--primary-navy);
+    color: var(--white);
 }
 .form-group input:focus, 
 .form-group select:focus, 
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-orange);
-    box-shadow: 0 0 0 3px rgba(221, 107, 32, 0.15);
+    box-shadow: 0 0 0 3px rgba(221, 107, 32, 0.3);
 }
 .form-row {
     display: grid;
@@ -356,11 +411,11 @@ nav {
     gap: 1.5rem;
 }
 .widget-note {
-    background-color: #EDF2F7;
+    background: rgba(255, 255, 255, 0.1);
     border-left: 4px solid var(--accent-orange);
     padding: 0.75rem 1rem;
     font-size: 0.85rem;
-    color: var(--text-gray);
+    color: #E2E8F0;
     margin-bottom: 1.5rem;
     border-radius: 0 4px 4px 0;
 }
@@ -382,7 +437,7 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #112440;
+    background-color: #0b182d;
     color: #A0AEC0;
     text-align: center;
     padding: 2rem;
