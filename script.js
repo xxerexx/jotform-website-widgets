@@ -1,8 +1,42 @@
-const header=document.querySelector('.site-header');const progress=document.querySelector('#scrollProgress');const navLinks=[...document.querySelectorAll('.nav-links a')];const sections=[...document.querySelectorAll('.section-anchor')];const menu=document.querySelector('#navLinks');const menuToggle=document.querySelector('.menu-toggle');
-function onScroll(){const y=window.scrollY;header.classList.toggle('scrolled',y>30);const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=`${max?y/max*100:0}%`;let current='home';sections.forEach(s=>{if(y>=s.offsetTop-160)current=s.id});navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${current}`));document.querySelectorAll('[data-speed]').forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const speed=parseFloat(el.dataset.speed||.1);el.style.transform=`translate3d(0,${-r.top*speed}px,0) scale(1.08)`}})}window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-menuToggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',open);document.body.classList.toggle('menu-open',open)});navLinks.forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');document.body.classList.remove('menu-open');menuToggle.setAttribute('aria-expanded','false')}));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const counterIO=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,target=+el.dataset.count,suffix=el.dataset.suffix||'',start=performance.now(),duration=1200;function tick(t){const p=Math.min((t-start)/duration,1),v=Math.round(target*(1-Math.pow(1-p,3)));el.textContent=v+suffix;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick);counterIO.unobserve(el)}),{threshold:.5});document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
-const range=document.querySelector('#compareRange'),before=document.querySelector('#beforeLayer'),line=document.querySelector('#compareLine');function compare(){before.style.width=range.value+'%';line.style.left=range.value+'%'}range.addEventListener('input',compare);compare();
-document.querySelector('#estimateForm').addEventListener('submit',e=>{e.preventDefault();document.querySelector('#formStatus').textContent='Demo form submitted. Replace this form with your Jotform estimate-request embed for production.'});
-const tourSteps=[['Welcome to Apex','This uncommon Website Tour widget can guide first-time visitors through the most important sections.','#home'],['See the services','Highlight the main renovation categories and help visitors quickly find the right scope.','#services'],['Inspect the work','Guide visitors to before-and-after transformations and completed projects.','#projects'],['Request an estimate','Finish the tour at the conversion point: your Jotform estimate request.','#contact']];let tourIndex=0;const pop=document.querySelector('#tourPopover'),title=document.querySelector('#tourTitle'),text=document.querySelector('#tourText'),count=document.querySelector('#tourCount');function renderTour(scroll=true){const s=tourSteps[tourIndex];title.textContent=s[0];text.textContent=s[1];count.textContent=`${tourIndex+1} / ${tourSteps.length}`;if(scroll)document.querySelector(s[2]).scrollIntoView({behavior:'smooth',block:'start'})}document.querySelector('#tourLaunch').onclick=()=>{pop.hidden=false;renderTour(false)};document.querySelector('#tourClose').onclick=()=>pop.hidden=true;document.querySelector('#tourNext').onclick=()=>{tourIndex=(tourIndex+1)%tourSteps.length;renderTour()};document.querySelector('#tourPrev').onclick=()=>{tourIndex=(tourIndex-1+tourSteps.length)%tourSteps.length;renderTour()};
+// Apex Builders Main JavaScript File
+
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteForm = document.getElementById('quoteForm');
+
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Collect form input data
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const serviceType = document.getElementById('serviceType').value;
+            const budget = document.getElementById('budget').value;
+
+            // Simple validation feedback (Replace with Jotform API / submission handler when integrated)
+            if (fullName && phone && serviceType && budget) {
+                alert(`Thank you, ${fullName}! Your quote request for a ${serviceType} has been submitted. An Apex Builders estimator will reach out to ${phone} within 24 hours.`);
+                quoteForm.reset();
+            } else {
+                alert('Please fill out all required fields before submitting.');
+            }
+        });
+    }
+
+    // Smooth scroll enhancement for navigation items
+    const navLinks = document.querySelectorAll('nav a[href^="#"], .hero-content a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#') && targetId.length > 1) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
