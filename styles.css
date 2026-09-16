@@ -1,40 +1,512 @@
+/* =========================================================
+   APEX BUILDERS
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES
+   ========================================================= */
+
+:root {
+  --apex-navy: #102a43;
+  --apex-navy-deep: #071a2b;
+  --apex-orange: #dd6b20;
+  --apex-cream: #f7f5f0;
+  --apex-white: #ffffff;
+  --apex-ink: #17212b;
+  --apex-muted: #66727e;
+}
+
+
+/* =========================================================
+   2. BASE STYLES
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--apex-ink);
+  background: var(--apex-white);
+  line-height: 1.6;
 }
 
-header,
-section,
-footer {
-  padding: 30px;
+body img {
+  display: block;
+  max-width: 100%;
 }
 
-header {
-  background: #1A365D;
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   3. HEADER & NAVIGATION
+   ========================================================= */
+
+.apex-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   color: white;
+  background: rgba(7, 26, 43, 0.94);
+
+  backdrop-filter: blur(12px);
 }
 
-nav a {
-  color: white;
-  margin-right: 20px;
-}
+.apex-site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-section {
-  max-width: 1100px;
+  width: min(1180px, calc(100% - 40px));
+  min-height: 72px;
   margin: auto;
 }
 
-h1,
-h2,
-h3 {
-  color: #1A365D;
+.apex-brand {
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
 }
 
-header h1 {
+.apex-brand span {
+  color: var(--apex-orange);
+}
+
+.apex-nav-links {
+  display: flex;
+  gap: 28px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   4. COMMON ELEMENTS
+   ========================================================= */
+
+.apex-eyebrow {
+  color: var(--apex-orange);
+
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.apex-button {
+  display: inline-block;
+
+  margin-top: 18px;
+  padding: 14px 22px;
+
+  color: white;
+  background: var(--apex-orange);
+
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+.apex-section,
+.apex-process-section {
+  padding: 100px 20px;
+}
+
+.apex-section-heading {
+  width: min(1180px, 100%);
+  margin: 0 auto 50px;
+}
+
+.apex-section-heading h2,
+.apex-quote-section h2,
+.apex-dark-copy h2,
+.apex-parallax-copy h2 {
+  margin: 8px 0 18px;
+
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.apex-section-heading > p:last-child {
+  color: var(--apex-muted);
+}
+
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+
+.apex-hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 88vh;
+
+  background-image:
+    url("https://hips.hearstapps.com/hmg-prod/images/edc100123egan-002-6500742f5feb7.jpg?crop=0.688xw:1.00xh;0.157xw,0&resize=1600:*");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.apex-hero-shade {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(7, 26, 43, 0.92),
+    rgba(7, 26, 43, 0.48),
+    rgba(7, 26, 43, 0.15)
+  );
+}
+
+.apex-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+
   color: white;
 }
 
-a {
-  color: #DD6B20;
+.apex-hero-content h1 {
+  max-width: 950px;
+  margin: 12px 0 24px;
+
+  font-size: clamp(3rem, 7vw, 6.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.apex-hero-content > p:not(.apex-eyebrow) {
+  max-width: 650px;
+
+  color: #e4ebf1;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   6. SERVICES
+   ========================================================= */
+
+.apex-service-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+
+  width: min(1180px, 100%);
+  margin: auto;
+}
+
+.apex-service-card {
+  overflow: hidden;
+
+  background: var(--apex-cream);
+}
+
+.apex-service-card img {
+  width: 100%;
+  height: 270px;
+
+  object-fit: cover;
+}
+
+.apex-card-copy {
+  padding: 28px;
+}
+
+.apex-card-copy span {
+  color: var(--apex-orange);
+  font-weight: 900;
+}
+
+.apex-card-copy h3 {
+  margin: 8px 0;
+
+  font-size: 1.45rem;
+}
+
+
+/* =========================================================
+   7. PROCESS
+   Important: Keep Apex-specific class names.
+   Avoid generic names such as .timeline or .timeline-item.
+   ========================================================= */
+
+.apex-process-section {
+  background: var(--apex-cream);
+}
+
+.apex-process-list {
+  width: min(900px, 100%);
+  margin: auto;
+}
+
+.apex-process-step {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 25px;
+
+  padding: 32px 0;
+
+  border-top: 1px solid #d7d9d9;
+}
+
+.apex-process-step strong {
+  color: var(--apex-orange);
+  font-size: 2rem;
+}
+
+.apex-process-step h3 {
+  margin: 0 0 7px;
+
+  font-size: 1.35rem;
+}
+
+.apex-process-step p {
+  margin: 0;
+
+  color: var(--apex-muted);
+}
+
+
+/* =========================================================
+   8. JOTFORM WIDGET AREAS
+   Do not style Jotform's generated internal elements.
+   ========================================================= */
+
+.apex-widget-section {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.apex-widget-label {
+  padding: 28px;
+
+  color: var(--apex-muted);
+  background: #fafafa;
+
+  text-align: center;
+  border: 1px dashed #b8c0c7;
+}
+
+
+/* =========================================================
+   9. PARALLAX SECTION
+   ========================================================= */
+
+.apex-parallax-band {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 65vh;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.apex-parallax-band::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(7, 26, 43, 0.62);
+}
+
+.apex-parallax-band-one {
+  background-image:
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85");
+}
+
+.apex-parallax-copy {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+
+  color: white;
+}
+
+
+/* =========================================================
+   10. PROJECTS
+   ========================================================= */
+
+.apex-project-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 65px;
+
+  width: min(1180px, 100%);
+  margin: 0 auto 80px;
+}
+
+.apex-project-row-reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.apex-project-row-reverse img {
+  order: 2;
+}
+
+.apex-project-row img {
+  width: 100%;
+  height: 470px;
+
+  object-fit: cover;
+}
+
+.apex-project-row h3 {
+  margin: 12px 0;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.apex-project-tag {
+  color: var(--apex-orange);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   11. DARK FEATURE SECTION
+   ========================================================= */
+
+.apex-dark-section {
+  padding: 120px 20px;
+
+  color: white;
+  background: var(--apex-navy-deep);
+}
+
+.apex-dark-copy {
+  width: min(900px, 100%);
+  margin: auto;
+}
+
+.apex-dark-copy > p:last-child {
+  max-width: 650px;
+
+  color: #b9c6d0;
+}
+
+
+/* =========================================================
+   12. QUOTE / CTA SECTION
+   ========================================================= */
+
+.apex-quote-section {
+  padding: 120px 20px;
+
+  background: var(--apex-cream);
+
+  text-align: center;
+}
+
+.apex-quote-section > p:not(.apex-eyebrow) {
+  color: var(--apex-muted);
+}
+
+
+/* =========================================================
+   13. FOOTER
+   ========================================================= */
+
+.apex-site-footer {
+  padding: 50px 20px;
+
+  color: #b9c6d0;
+  background: var(--apex-navy-deep);
+
+  text-align: center;
+}
+
+.apex-site-footer strong {
+  color: white;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   14. SCROLL PROGRESS
+   ========================================================= */
+
+#apex-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+
+  width: 0;
+  height: 3px;
+
+  background: var(--apex-orange);
+}
+
+
+/* =========================================================
+   15. RESPONSIVE / MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .apex-nav-links {
+    display: none;
+  }
+
+  .apex-service-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .apex-project-row,
+  .apex-project-row-reverse {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .apex-project-row-reverse img {
+    order: 0;
+  }
+
+  .apex-project-row img {
+    height: 330px;
+  }
+
+  .apex-process-step {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .apex-parallax-band {
+    background-attachment: scroll;
+  }
 }
