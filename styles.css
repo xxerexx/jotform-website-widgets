@@ -473,6 +473,50 @@ body a {
   background: var(--apex-orange);
 }
 
+/* =========================================================
+   REVEAL ANIMATIONS
+   Never apply these classes to Jotform widget containers.
+   ========================================================= */
+
+.apex-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.apex-reveal.apex-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.apex-reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.apex-reveal-left.apex-reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.apex-reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.apex-reveal-right.apex-reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 /* =========================================================
    15. RESPONSIVE / MOBILE
