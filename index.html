@@ -1,199 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Builders | Home Renovation Contractors</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apex Builders & Renovations — premium home remodeling, additions, kitchens, bathrooms, and outdoor living.">
+  <title>Apex Builders | Home Renovation Contractors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Jotform Website Widget integration point: Scroll Progress Indicator -->
+  <div class="apex-scroll-progress" aria-hidden="true"><span id="apex-scroll-progress"></span></div>
 
-<div id="apex-scroll-progress"></div>
-
-<header class="apex-site-header">
-  <nav class="apex-site-nav">
-    <a class="apex-brand" href="#apex-home">APEX<span>.</span></a>
-    <div class="apex-nav-links">
-      <a href="#apex-home">Home</a>
-      <a href="#apex-services">Services</a>
-      <a href="#apex-process">Our Process</a>
-      <a href="#apex-projects">Projects</a>
-      <a href="#apex-quote">Get a Quote</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-<section id="apex-home" class="apex-hero">
-  <div class="apex-hero-shade"></div>
-  <div class="apex-hero-content">
-    <p class="apex-eyebrow">HOME RENOVATION • DESIGN • BUILD</p>
-    <h1>Building Visions.<br>Delivering Excellence.</h1>
-    <p>From full-scale additions to refined kitchen and bathroom remodels, Apex Builders delivers thoughtful design and dependable craftsmanship.</p>
-    <a class="apex-button" href="#apex-quote">Start Your Project</a>
-  </div>
-</section>
-
-<!-- JOTFORM WEBSITE WIDGET 1: NUMBER COUNTER -->
-<section class="apex-widget-section">
-  <div id="JFWebsiteWidget-01a0aa940718700083cd55412ab12e6bc144"></div>
-  <script src="https://www.jotform.com/website-widgets/embed/01a0aa940718700083cd55412ab12e6bc144"></script>
-</section>
-
-<section id="apex-services" class="apex-section">
-  <div class="apex-section-heading">
-    <p class="apex-eyebrow">WHAT WE BUILD</p>
-    <h2>Spaces Made Better</h2>
-    <p>Renovation work built around the way you actually live.</p>
-  </div>
-
-  <div class="apex-service-layout">
-    <article class="apex-service-card">
-      <img src="https://www.kaminskiyhomeremodeling.com/wp-content/uploads/2018/07/kitchen-remodel-company.jpg" alt="Kitchen remodeling">
-      <div class="apex-card-copy">
-        <span>01</span><h3>Kitchen Remodels</h3>
-        <p>Custom cabinetry, premium surfaces and practical layouts designed for everyday life.</p>
+  <header class="apex-site-header" id="apex-top">
+    <nav class="apex-nav apex-shell" aria-label="Primary navigation">
+      <a class="apex-brand" href="#apex-home" aria-label="Apex Builders home"><span class="apex-brand-mark">A</span><span>APEX <b>BUILDERS</b></span></a>
+      <button class="apex-menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="apex-nav-links" id="apex-nav-links">
+        <a href="#apex-home">Home</a><a href="#apex-services">Services</a><a href="#apex-process">Process</a><a href="#apex-projects">Projects</a><a href="#apex-about">Why Apex</a><a href="#apex-contact">Contact</a>
       </div>
-    </article>
-    <article class="apex-service-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJkDoadEidHCstIA65EiRZOKY14Xio2VnBdF4FQe_iDuoy2itKMYzmycaM&s=10" alt="Bathroom renovation">
-      <div class="apex-card-copy">
-        <span>02</span><h3>Bathroom Oasis</h3>
-        <p>Modern fixtures, custom tile and calm, functional spaces with a polished finish.</p>
+      <a class="apex-nav-cta" href="#apex-contact">Get an Estimate <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="apex-hero apex-section-anchor" id="apex-home">
+      <div class="apex-hero-media apex-parallax-bg" data-speed="0.22"></div>
+      <div class="apex-hero-shade"></div>
+      <div class="apex-hero-grid apex-shell">
+        <div class="apex-hero-copy apex-reveal">
+          <p class="apex-kicker apex-light">Built with precision. Finished with purpose.</p>
+          <h1>We turn good homes into <em>remarkable spaces.</em></h1>
+          <p class="apex-hero-lead">From full-scale additions to high-end kitchens and bathrooms, Apex Builders delivers craftsmanship, clear communication, and a renovation process you can actually enjoy.</p>
+          <div class="apex-hero-actions"><a class="apex-btn apex-primary" href="#apex-projects">Explore our work</a><a class="apex-btn apex-ghost" href="#apex-contact">Plan your project</a></div>
+        </div>
+        <aside class="apex-hero-card apex-reveal" aria-label="Apex Builders highlights">
+          <p class="apex-micro">Apex standard</p><strong>Built right.<br>Down to the details.</strong>
+          <div class="apex-hero-card-row"><span>Licensed & insured</span><span>15+ years</span></div>
+        </aside>
       </div>
-    </article>
-    <article class="apex-service-card">
-      <img src="https://deomaxgroup.ca/wp-content/uploads/2025/03/custom-home-addition-remodel-plans.webp" alt="Home addition">
-      <div class="apex-card-copy">
-        <span>03</span><h3>Additions & Extensions</h3>
-        <p>More room without losing the character and flow of your existing home.</p>
+      <a class="apex-scroll-cue" href="#apex-services"><span>Scroll to explore</span><i></i></a>
+    </section>
+
+    <!-- Jotform Website Widget #1: Number Counter
+         Kept outside animated/transformed containers so the Jotform embed can size itself normally. -->
+    <section class="apex-proof-band apex-jotform-widget-section" aria-label="Company statistics">
+      <div class="apex-jotform-widget-shell">
+        <div id="JFWebsiteWidget-01a0aa940718700083cd55412ab12e6bc144"></div>
+        <script src="https://www.jotform.com/website-widgets/embed/01a0aa940718700083cd55412ab12e6bc144"></script>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
-<!-- JOTFORM WEBSITE WIDGET 2: BEFORE & AFTER SLIDER
-Paste the COMPLETE Jotform embed below this comment.
-Do not wrap its div/script in an Apex layout component.
--->
-<section class="apex-widget-section">
-  <p class="apex-widget-label">Before & After Slider widget goes here</p>
-</section>
+    <section class="apex-section apex-services apex-section-anchor" id="apex-services">
+      <div class="apex-shell">
+        <div class="apex-section-head apex-split apex-reveal"><div><p class="apex-kicker">What we build</p><h2>Renovation without the guesswork.</h2></div><p>One experienced team coordinates design, planning, permits, materials, and construction so your project stays cohesive from the first sketch to the final walkthrough.</p></div>
+        <div class="apex-service-grid">
+          <article class="apex-service-card apex-reveal"><img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1200&q=85" alt="Modern luxury kitchen renovation"><div><span>01</span><h3>Kitchen Remodels</h3><p>Custom cabinetry, thoughtful layouts, premium surfaces, lighting, and finishes designed around how you live.</p><a href="#apex-contact">Discuss your kitchen ↗</a></div></article>
+          <article class="apex-service-card apex-reveal"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=85" alt="Contemporary bathroom renovation"><div><span>02</span><h3>Bathroom Retreats</h3><p>Walk-in showers, tilework, vanities, lighting, and spa-inspired details with practical everyday durability.</p><a href="#apex-contact">Plan your bathroom ↗</a></div></article>
+          <article class="apex-service-card apex-reveal"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Modern home exterior and addition"><div><span>03</span><h3>Additions & Extensions</h3><p>New rooms, second stories, and expanded living areas integrated with your home's architecture and flow.</p><a href="#apex-contact">Explore an addition ↗</a></div></article>
+        </div>
+      </div>
+    </section>
 
-<section id="apex-process" class="apex-process-section">
-  <div class="apex-section-heading">
-    <p class="apex-eyebrow">THE APEX METHOD</p>
-    <h2>From Idea to Finish</h2>
-  </div>
+    <section class="apex-image-break apex-parallax-section">
+      <div class="apex-parallax-panel" data-speed="0.16"></div>
+      <div class="apex-shell apex-image-break-copy apex-reveal"><p class="apex-kicker apex-light">Craftsmanship you can see</p><h2>Strong bones.<br>Beautiful finish.</h2></div>
+    </section>
 
-  <div class="apex-process-list">
-    <article class="apex-process-step">
-      <strong>01</strong>
-      <div><h3>Consultation & Estimate</h3><p>We learn the goals, inspect the space and define a clear scope.</p></div>
-    </article>
-    <article class="apex-process-step">
-      <strong>02</strong>
-      <div><h3>Design & Permitting</h3><p>Plans, selections and required approvals are prepared before construction begins.</p></div>
-    </article>
-    <article class="apex-process-step">
-      <strong>03</strong>
-      <div><h3>Construction Phase</h3><p>A dedicated project lead keeps work organized and communication straightforward.</p></div>
-    </article>
-    <article class="apex-process-step">
-      <strong>04</strong>
-      <div><h3>Final Walkthrough</h3><p>We inspect the completed work together and close out the final details.</p></div>
-    </article>
-  </div>
-</section>
+    <section class="apex-section apex-process apex-section-anchor" id="apex-process">
+      <div class="apex-shell apex-process-grid">
+        <div class="apex-process-intro apex-reveal"><p class="apex-kicker">Our process</p><h2>A clearer way to renovate.</h2><p>Major construction is complicated. Your experience with your contractor shouldn't be.</p><div class="apex-process-photo"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85" alt="Construction team reviewing plans"></div></div>
+        <div class="apex-steps">
+          <article class="apex-step apex-reveal"><span>01</span><div><h3>Consult & Scope</h3><p>We walk the property, listen to your priorities, define scope, and establish realistic budget and timing expectations.</p></div></article>
+          <article class="apex-step apex-reveal"><span>02</span><div><h3>Design & Prepare</h3><p>Plans, selections, permitting, scheduling, and procurement are coordinated before construction begins.</p></div></article>
+          <article class="apex-step apex-reveal"><span>03</span><div><h3>Build & Communicate</h3><p>Your project manager coordinates the site and keeps you informed with clear milestones and decisions.</p></div></article>
+          <article class="apex-step apex-reveal"><span>04</span><div><h3>Inspect & Hand Over</h3><p>We review the finished work together, resolve punch-list items, and hand over a space built to last.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-<!-- JOTFORM WEBSITE WIDGET 3: LOGO SHOWCASE -->
-<section class="apex-widget-section">
-  <div id="JFWebsiteWidget-01a0ab334c88700080f1ca81c612a5c1b85d"></div>
-  <script src="https://www.jotform.com/website-widgets/embed/01a0ab334c88700080f1ca81c612a5c1b85d"></script>
-</section>
+    <!-- Jotform Website Widget #2: Before and After Slider -->
+    <section class="apex-section apex-transformation apex-section-anchor" id="apex-projects">
+      <div class="apex-shell">
+        <div class="apex-section-head apex-split apex-reveal"><div><p class="apex-kicker">Before / after</p><h2>Drag the line. See the difference.</h2></div><p>A natural fit for Jotform's less-common Before and After Slider widget, letting prospective clients inspect the transformation instead of just reading about it.</p></div>
+        <div class="apex-compare apex-reveal" id="apex-compare">
+          <img class="apex-compare-after" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=85" alt="Renovated modern kitchen">
+          <div class="apex-compare-before" id="apex-before-layer"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1600&q=85" alt="Kitchen before renovation"></div>
+          <div class="apex-compare-line" id="apex-compare-line"><span>↔</span></div>
+          <input id="apex-compare-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after images">
+          <span class="apex-compare-label apex-before">Before</span><span class="apex-compare-label apex-after">After</span>
+        </div>
+        <div class="apex-widget-note">Jotform Website Widget: <b>Before and After Slider</b> — this working native preview marks the ideal embed location.</div>
+      </div>
+    </section>
 
-<section class="apex-parallax-band apex-parallax-band-one">
-  <div class="apex-parallax-copy">
-    <p class="apex-eyebrow">CRAFTED FOR THE LONG TERM</p>
-    <h2>Details Matter.</h2>
-  </div>
-</section>
+    <section class="apex-section apex-projects-showcase">
+      <div class="apex-shell">
+        <div class="apex-project apex-reveal"><div class="apex-project-image"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85" alt="Luxury open concept interior"></div><div class="apex-project-copy"><span class="apex-tag">Whole-home renovation</span><h3>The Oakwood Estate</h3><p>An older compartmentalized layout reworked into an open, light-filled living space with custom millwork, warm timber, and a statement kitchen.</p><dl><div><dt>Scope</dt><dd>2,400 sq ft</dd></div><div><dt>Timeline</dt><dd>18 weeks</dd></div></dl></div></div>
+        <div class="apex-project apex-reverse apex-reveal"><div class="apex-project-image"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=85" alt="Luxury bathroom with freestanding tub"></div><div class="apex-project-copy"><span class="apex-tag">Primary suite</span><h3>Maple Street Bath</h3><p>A calm, hotel-inspired primary bathroom featuring a frameless shower, freestanding tub, layered lighting, and custom storage.</p><dl><div><dt>Scope</dt><dd>Primary bath</dd></div><div><dt>Timeline</dt><dd>8 weeks</dd></div></dl></div></div>
+      </div>
+    </section>
 
-<section id="apex-projects" class="apex-section">
-  <div class="apex-section-heading">
-    <p class="apex-eyebrow">SELECTED WORK</p>
-    <h2>Recent Transformations</h2>
-  </div>
+    <!-- Jotform Website Widget #3: Logo Showcase -->
+    <section class="apex-partner-strip">
+      <div class="apex-shell apex-reveal"><p class="apex-micro">Materials & systems we work with</p><div class="apex-logo-ticker"><span>KOHLER</span><span>CAMBRIA</span><span>MARVIN</span><span>SHERWIN-WILLIAMS</span><span>AZEK</span><span>DELTA</span></div><div class="apex-widget-note apex-dark-note">Jotform Website Widget: <b>Logo Showcase</b> — use its ticker/carousel layout here.</div></div>
+    </section>
 
-  <article class="apex-project-row">
-    <img src="https://georgedecoration.com/wp-content/uploads/2024/07/d68f655f65d42d0d2708f89a307893c-768x432.png" alt="Oakwood Estate">
-    <div><span class="apex-project-tag">FULL REMODEL</span><h3>The Oakwood Estate</h3><p>An open-concept renovation focused on natural materials, light and generous gathering space.</p></div>
-  </article>
+    <section class="apex-section apex-why apex-section-anchor" id="apex-about">
+      <div class="apex-shell apex-why-grid">
+        <div class="apex-why-copy apex-reveal"><p class="apex-kicker">Why Apex</p><h2>The details behind a better build.</h2><p>Good construction isn't just what you see at the end. It's planning, documentation, clean job sites, responsive communication, and disciplined execution all the way through.</p><a class="apex-text-link" href="#apex-contact">Talk with our team ↗</a></div>
+        <div class="apex-why-cards">
+          <article class="apex-reveal"><span>01</span><h3>One accountable team</h3><p>Clear ownership from estimate through closeout.</p></article><article class="apex-reveal"><span>02</span><h3>Transparent decisions</h3><p>Scope, selections, costs, and changes stay visible.</p></article><article class="apex-reveal"><span>03</span><h3>Respect for your home</h3><p>Organized sites, thoughtful protection, and professional crews.</p></article><article class="apex-reveal"><span>04</span><h3>Built for longevity</h3><p>Materials and methods chosen for durability, not shortcuts.</p></article>
+        </div>
+      </div>
+    </section>
 
-  <article class="apex-project-row apex-project-row-reverse">
-    <img src="https://hamishmurray.com/wp-content/uploads/2019/10/battleground-24.jpg" alt="Maple Street bathroom">
-    <div><span class="apex-project-tag">BATHROOM</span><h3>Maple Street Master Bath</h3><p>A calm, modern retreat with upgraded finishes and a more useful floor plan.</p></div>
-  </article>
+    <!-- Jotform Website Widget #4: Comparison Table -->
+    <section class="apex-section apex-package-section">
+      <div class="apex-shell"><div class="apex-section-head apex-centered apex-reveal"><p class="apex-kicker">Project paths</p><h2>Find the right starting point.</h2><p>Use a Comparison Table widget here to explain how different renovation scopes typically differ before a visitor requests an estimate.</p></div>
+        <div class="apex-comparison-table apex-reveal"><div class="apex-comparison-row apex-head"><span>Project type</span><span>Design support</span><span>Permitting</span><span>Dedicated PM</span></div><div class="apex-comparison-row"><b>Kitchen / Bath</b><span>Included</span><span>As needed</span><span>✓</span></div><div class="apex-comparison-row"><b>Whole Home</b><span>Included</span><span>Included</span><span>✓</span></div><div class="apex-comparison-row"><b>Addition</b><span>Full planning</span><span>Included</span><span>✓</span></div></div>
+        <div class="apex-widget-note">Jotform Website Widget: <b>Comparison Table</b> — replace the preview with your configured embed.</div>
+      </div>
+    </section>
 
-  <article class="apex-project-row">
-    <img src="https://www.longhousecedar.com/wp-content/uploads/2019/04/thumb-contemporary-outdoor-hardwood-floor-tiles-for-wood-doors.jpg" alt="Riverside outdoor living">
-    <div><span class="apex-project-tag">OUTDOOR LIVING</span><h3>Riverside Outdoor Living</h3><p>A layered outdoor entertaining area designed to extend the home beyond its walls.</p></div>
-  </article>
-</section>
+    <!-- Jotform Website Widget #5: PDF Embed -->
+    <section class="apex-section apex-resource-section"><div class="apex-shell apex-resource-grid"><div class="apex-reveal"><p class="apex-kicker">Planning resource</p><h2>Know what happens before demo day.</h2><p>Embed a renovation planning guide, sample scope, finish checklist, or warranty PDF directly on the page so qualified leads can review it without leaving the site.</p><a class="apex-btn apex-dark" href="#apex-contact">Request the planning guide</a></div><div class="apex-pdf-card apex-reveal"><div class="apex-pdf-icon">PDF</div><div><span>Home Renovation Planning Guide</span><small>Scope • Budget • Selections • Timeline</small></div><button type="button">Preview</button></div></div><div class="apex-shell apex-widget-note">Jotform Website Widget: <b>PDF Embed</b> — ideal for a planning guide or sample project packet.</div></section>
 
-<!-- JOTFORM WEBSITE WIDGET 4: COMPARISON TABLE -->
-<section class="apex-widget-section">
-  <p class="apex-widget-label">Comparison Table widget goes here</p>
-</section>
+    <!-- Jotform Website Widget #6: Business Hours -->
+    <section class="apex-section apex-contact apex-section-anchor" id="apex-contact">
+      <div class="apex-shell apex-contact-grid">
+        <div class="apex-contact-copy apex-reveal"><p class="apex-kicker apex-light">Start a conversation</p><h2>Tell us what you're thinking about building.</h2><p>Share your goals, rough budget, and timing. We'll follow up to see whether Apex is a fit for your project.</p><div class="apex-hours-card"><div><span class="apex-status-dot"></span><strong>Project desk</strong><small>Open today · 8:00 AM–5:00 PM</small></div><a href="tel:+10000000000">Call →</a></div><div class="apex-widget-note apex-dark-note">Jotform Website Widget: <b>Business Hours</b> — can show live open/closed status and contact actions.</div></div>
+        <form class="apex-estimate-form apex-reveal" id="apex-estimate-form"><div class="apex-form-row"><label>Full name<input type="text" required placeholder="Your name"></label><label>Email<input type="email" required placeholder="you@example.com"></label></div><label>Project type<select required><option value="">Select a project</option><option>Kitchen remodel</option><option>Bathroom remodel</option><option>Home addition</option><option>Whole-home renovation</option><option>Outdoor living</option></select></label><label>Tell us about the project<textarea rows="5" placeholder="What would you like to change?"></textarea></label><button class="apex-btn apex-primary apex-full" type="submit">Request an estimate <span>↗</span></button><p class="apex-form-status" id="apex-form-status" aria-live="polite"></p></form>
+      </div>
+    </section>
 
-<section class="apex-dark-section">
-  <div class="apex-dark-copy">
-    <p class="apex-eyebrow">WHY APEX</p>
-    <h2>Built on clarity.<br>Finished with care.</h2>
-    <p>Clear scopes, consistent communication and careful execution from the first conversation to final walkthrough.</p>
-  </div>
-</section>
+    <!-- Jotform Website Widget #7: Website Tour -->
+    <button class="apex-tour-launch" id="apex-tour-launch" type="button">Take a 30-sec site tour</button>
+    <div class="apex-tour-popover" id="apex-tour-popover" hidden><button class="apex-tour-close" id="apex-tour-close">×</button><small>Jotform Website Tour</small><strong id="apex-tour-title">Welcome to Apex</strong><p id="apex-tour-text">This uncommon widget can guide visitors through services, project examples, the process, and the estimate form.</p><div><button id="apex-tour-prev">Back</button><span id="apex-tour-count">1 / 4</span><button id="apex-tour-next">Next</button></div></div>
 
-<!-- JOTFORM WEBSITE WIDGET 5: PDF EMBED -->
-<section class="apex-widget-section">
-  <p class="apex-widget-label">PDF Embed widget goes here</p>
-</section>
+    <!-- Jotform Website Widget #8: Scroll Progress Indicator is represented at the top of <body>. -->
+  </main>
 
-<!-- JOTFORM WEBSITE WIDGET 6: BUSINESS HOURS -->
-<section class="apex-widget-section">
-  <p class="apex-widget-label">Business Hours widget goes here</p>
-</section>
+  <footer><div class="apex-shell apex-footer-grid"><div><a class="apex-brand apex-footer-brand" href="#apex-top"><span class="apex-brand-mark">A</span><span>APEX <b>BUILDERS</b></span></a><p>Renovations, additions, and interiors built with care.</p></div><div><strong>Navigate</strong><a href="#apex-services">Services</a><a href="#apex-process">Process</a><a href="#apex-projects">Projects</a><a href="#apex-contact">Estimate</a></div><div><strong>Contact</strong><span>Mon–Fri · 8 AM–5 PM</span><span>hello@apexbuilders.example</span><span>(000) 000-0000</span></div></div><div class="apex-shell apex-footer-bottom"><span>© 2026 Apex Builders & Renovations.</span><span>Licensed · Bonded · Insured</span></div></footer>
 
-<section id="apex-quote" class="apex-quote-section">
-  <p class="apex-eyebrow">READY WHEN YOU ARE</p>
-  <h2>Start Your Renovation</h2>
-  <p>Tell us what you're planning and we'll help map out the next step.</p>
-  <a class="apex-button" href="mailto:hello@example.com">Request an Estimate</a>
-</section>
-
-<!--
-JOTFORM WEBSITE WIDGET 7: WEBSITE TOUR
-Paste the COMPLETE Jotform Website Tour embed immediately before </body>.
-Do not put it inside another div.
-
-JOTFORM WEBSITE WIDGET 8: SCROLL PROGRESS INDICATOR
-Paste the COMPLETE Jotform Scroll Progress Indicator embed immediately before </body>.
-Do not put it inside another div.
-
-IMPORTANT:
-Only the two widget IDs supplied by you are included above.
-Do not invent IDs for widgets 2, 4, 5, 6, 7 or 8.
--->
-
-</main>
-
-<footer class="apex-site-footer">
-  <strong>APEX BUILDERS</strong>
-  <p>Home Renovation • Design • Build</p>
-  <p>© 2026 Apex Builders & Renovations.</p>
-</footer>
-
-<script src="apex.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
